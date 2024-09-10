@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "87e35b14-8ea0-49c2-b735-32a7949d620e",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6895876"
+	},
+	"item": [
+		{
+			"name": "All users",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "suraj17",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "suraj3",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:1920/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "1920",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user by Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "suraj17",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "suraj3",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:1920/api/users/2",
+					"host": [
+						"localhost"
+					],
+					"port": "1920",
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"suraj\",\r\n    \"username\": \"suraj17\",\r\n    \"email\": \"suraj17@gmail.com\",\r\n    \"password\": \"suraj3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1920/api/users/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "1920",
+					"path": [
+						"api",
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"suraj2\",\r\n    \"email\": \"suraj2@gmail.com\",\r\n    \"password\": \"suraj2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1920/api/users/2",
+					"host": [
+						"localhost"
+					],
+					"port": "1920",
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"suraj1\",\r\n    // \"email\": \"suraj1@gmail.com\",\r\n    \"password\": \"suraj2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1920/api/users/signin",
+					"host": [
+						"localhost"
+					],
+					"port": "1920",
+					"path": [
+						"api",
+						"users",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin SignIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    // \"username\": \"suraj1\",\r\n    \"email\": \"suraj17@gmail.com\",\r\n    \"password\": \"suraj3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1920/api/admin/signin",
+					"host": [
+						"localhost"
+					],
+					"port": "1920",
+					"path": [
+						"api",
+						"admin",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
